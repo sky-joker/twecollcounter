@@ -29,7 +29,7 @@ If you don't have Twitter API code, please issue it in the following site.
 Clone this repository and install the required python packages.
 
 ```
-# git clone https://
+# git clone https://github.com/sky-joker/twecollcounter
 # cd twecollcounter
 # pip install -r requirements.txt
 ```
