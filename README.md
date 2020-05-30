@@ -91,7 +91,7 @@ db = %(redis_db)s
 
 The following is a correspondence table of setting values and environment variables.
 
-| config value |     environment valiable    |
+| config value |     environment variable    |
 |--------------|-----------------------------|
 | api_key      | twitter_api_api_key         |
 | api_secret   | twitter_api_api_secret      |
