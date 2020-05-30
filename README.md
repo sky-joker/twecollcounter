@@ -1,5 +1,9 @@
 # twecollcounter
 
+[![Bulid Status](https://img.shields.io/travis/sky-joker/twecollcounter/master?style=for-the-badge)](https://travis-ci.org/sky-joker/twecollcounter)
+[![](https://img.shields.io/github/license/sky-joker/twecollcounter?style=for-the-badge)](https://github.com/sky-joker/twecollcounter/blob/master/LICENSE.txt)
+[![](https://img.shields.io/docker/image-size/skyjokerxx/twecollcounter?sort=date&style=for-the-badge)](https://hub.docker.com/repository/docker/skyjokerxx/twecollcounter)
+
 This tool can collect a hash tag tweet from twitter, and aggregate each user tweet the number.
 
 ## Requirements
