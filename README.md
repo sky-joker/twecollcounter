@@ -43,7 +43,6 @@ Clone this repository and install the required python packages.
 Please change the values in a configuration file.
 
 ```
-# cd src/twecollcounter/
 # vi config.ini
 ```
 
