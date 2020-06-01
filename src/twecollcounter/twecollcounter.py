@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from datetime import datetime, timedelta
+from datetime import datetime
 from configparser import ConfigParser
 from urllib.parse import quote
 from time import sleep
