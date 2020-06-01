@@ -50,9 +50,7 @@ def oauth_req(url, api_key, api_secret, token_key, token_secret, http_method="GE
     return content
 
 
-def collect_tweet(url, api_key, api_secret, token_key, token_secret, redis_cli, collection_interval):
-    compare_time = datetime.now().replace(second=0, microsecond=0)
-    compare_time = compare_time.astimezone(pytz.timezone(time_zone))
+def collect_tweet(url, api_key, api_secret, token_key, token_secret, redis_cli, compare_timel):
     data = json.loads(oauth_req(url, api_key, api_secret, token_key, token_secret))
 
     for t in data['statuses']:
@@ -96,9 +94,12 @@ if __name__ == "__main__":
     if args.collect:
         url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + collection_hash_tag + '&count=' + collection_count
 
+        compare_time = datetime.now()
+        compare_time = compare_time.astimezone(pytz.timezone(time_zone))
+
         while True:
             t = threading.Thread(target=collect_tweet(url, api_key, api_secret, token_key, token_secret, redis_cli,
-                                                      collection_interval))
+                                                      compare_time))
             t.start()
             sleep(collection_interval)
 
