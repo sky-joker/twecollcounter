@@ -51,7 +51,7 @@ def oauth_req(url, api_key, api_secret, token_key, token_secret, http_method="GE
 
 
 def collect_tweet(url, api_key, api_secret, token_key, token_secret, redis_cli, collection_interval):
-    compare_time = datetime.now() - timedelta(seconds=collection_interval)
+    compare_time = datetime.now().replace(second=0, microsecond=0)
     compare_time = compare_time.astimezone(pytz.timezone(time_zone))
     data = json.loads(oauth_req(url, api_key, api_secret, token_key, token_secret))
 
